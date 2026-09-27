@@ -38,14 +38,16 @@ export function rateLimiter(req: Request, res: Response, next: NextFunction): vo
 
 export function verifyApiKey(req: Request, res: Response, next: NextFunction): void {
   const headerKey = req.headers["x-api-key"];
-  let apiKey = typeof headerKey === "string" ? headerKey.trim() : "";
+  const apiKey = typeof headerKey === "string" ? headerKey.trim() : "";
 
-  // Gracefully fallback to demo key if blank
-  if (!apiKey) {
-    apiKey = "satquery-demo-secret";
+  if (!apiKey || apiKey !== MASTER_API_KEY) {
+    res.status(401).json({
+      success: false,
+      detail: "Invalid or missing API key",
+    });
+    return;
   }
 
-  // Attach fingerprint to request
   (req as unknown as { apiKeyFingerprint: string }).apiKeyFingerprint =
     apiKeyFingerprint(apiKey);
 
