@@ -1,0 +1,37 @@
+{
+  "name": "satquery-ai",
+  "version": "1.0.0",
+  "description": "Agentic natural-language assistant for remote sensing and satellite imagery analysis",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx server.ts",
+    "build": "vite build && tsc",
+    "start": "node dist/server.js",
+    "lint": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@google/genai": "^2.21.0",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "jpeg-js": "^0.4.4",
+    "lucide-react": "^1.43.0",
+    "multer": "^2.3.0",
+    "pngjs": "^7.0.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/jpeg-js": "^0.3.7",
+    "@types/multer": "^2.2.0",
+    "@types/node": "^26.5.0",
+    "@types/pngjs": "^6.0.5",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vitejs/plugin-react": "^6.1.1",
+    "tsx": "^4.23.13",
+    "typescript": "^7.0.2",
+    "vite": "^8.2.2"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "SatQuery AI",
+  "description": "Agentic natural-language assistant for remote sensing and satellite imagery analysis.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

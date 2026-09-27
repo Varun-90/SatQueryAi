@@ -1,0 +1,41 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.pyc
+.pytest_cache/
+*.egg-info/
+data/
+checkpoints/
+outputs/
+audit_log.sqlite3
+node_modules/
+.env
+.env.local
+dist/
+.DS_Store
+rs-env/
+models/.git_nested_backup/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Environment / secrets
+.env
+*.env
+
+# Runtime data
+uploads/
+logs/
+
+# Backend
+backend/.venv/
+backend/__pycache__/
+
+# Frontend
+frontend/node_modules/
+
+# IDE
+.vscode/
+.idea/
