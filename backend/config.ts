@@ -1,4 +1,4 @@
-export const PORT = 3000;
+export const PORT = Number(process.env.PORT || 3000);
 export const HOST = "0.0.0.0";
 
 export const MASTER_API_KEY = process.env.MASTER_API_KEY || "satquery-demo-secret";
