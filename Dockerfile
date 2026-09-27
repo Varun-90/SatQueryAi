@@ -18,7 +18,6 @@ FROM node:20-alpine AS runner
 
 WORKDIR /app
 ENV NODE_ENV=production
-ENV PORT=3000
 
 # Install production dependencies only
 COPY package*.json ./
